@@ -18,7 +18,7 @@ async def track(client):
         tweet["user"]["screen_name"], tweet["id"]
       )
       status = RETWEET_COMMENT + " " + tweet_url
-      print(status)
+      print("Retweeting", tweet_url)
       await client.api.statuses.update.post(status=status)
 
 if __name__ == "__main__":
