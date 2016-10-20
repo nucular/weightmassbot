@@ -28,4 +28,5 @@ if __name__ == "__main__":
     consumer_key=CONSUMER_KEY,
     consumer_secret=CONSUMER_SECRET
   )
+  print("Starting")
   asyncio.get_event_loop().run_until_complete(track(client))
