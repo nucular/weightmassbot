@@ -13,8 +13,8 @@ lastId = 0
 async def track(client):
   async with client.stream.statuses.filter.post(track=SEARCH_QUERY) as stream:
     async for tweet in stream:
-      if (not "text" in tweet)
-        or tweet["id"] <= lastId
+      if (not "text" in tweet) \
+        or tweet["id"] <= lastId \
         or not all(i in tweet["text"] for i in SEARCH_QUERY.split(" ")):
         continue
       lastId = tweet["id"]
