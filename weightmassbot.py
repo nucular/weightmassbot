@@ -16,7 +16,7 @@ async def track(client):
     async for tweet in stream:
       if (not "text" in tweet) \
         or tweet["id"] <= lastId \
-        or not all(i in tweet["text"] for i in SEARCH_QUERY.split(" ")):
+        or not all(i in tweet["text"].lower() for i in SEARCH_QUERY.lower().split(" ")):
         continue
       lastId = tweet["id"]
 
