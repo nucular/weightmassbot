@@ -1,4 +1,4 @@
-# Weight/Mass Bot
+# [Weight&#8800;Mass Bot](https://twitter.com/weightmassbot)
 
 Polite suggestions about the correct usage of the term "weight".
 
