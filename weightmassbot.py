@@ -3,6 +3,7 @@ from peony import PeonyClient
 
 SEARCH_QUERY = "weight kg"
 RETWEET_COMMENT = "You may have implied weight was measured in grams instead of Newtons. Did you mean MASS? If not, have a nice day :)"
+SCREEN_NAME = os.environ["TWITTER_SCREEN_NAME"]
 ACCESS_TOKEN = os.environ["TWITTER_ACCESS_TOKEN"]
 ACCESS_TOKEN_SECRET = os.environ["TWITTER_ACCESS_TOKEN_SECRET"]
 CONSUMER_KEY = os.environ["TWITTER_CONSUMER_KEY"]
@@ -16,6 +17,7 @@ async def track(client):
     async for tweet in stream:
       if (not "text" in tweet) \
         or tweet["id"] <= lastId \
+        or tweet["user"]["screen_name"] == SCREEN_NAME \
         or not all(i in tweet["text"].lower() for i in SEARCH_QUERY.lower().split(" ")):
         continue
       lastId = tweet["id"]
