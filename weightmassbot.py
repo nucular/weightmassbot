@@ -11,6 +11,7 @@ CONSUMER_SECRET = os.environ["TWITTER_CONSUMER_SECRET"]
 lastId = 0
 
 async def track(client):
+  global lastId
   async with client.stream.statuses.filter.post(track=SEARCH_QUERY) as stream:
     async for tweet in stream:
       if (not "text" in tweet) \
