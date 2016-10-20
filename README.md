@@ -1,4 +1,4 @@
-# Weight Mass Bot
+# Weight/Mass Bot
 
 Polite suggestions about the correct usage of the term "weight".
 
