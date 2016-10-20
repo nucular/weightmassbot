@@ -1,0 +1,1 @@
+-e git://github.com/nucular/peony-twitter.git#egg=peony-twitter
