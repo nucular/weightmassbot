@@ -9,6 +9,7 @@ Inspired by [@nonbinarybot](https://twitter.com/nonbinarybot) and
 
 ```
 pip3 install peony-twitter
+TWITTER_SCREEN_NAME=[the screen name of your twitter account]
 TWITTER_ACCESS_TOKEN=[your twitter API access token]
 TWITTER_ACCESS_TOKEN_SECRET=[your twitter API access token secret]
 TWITTER_CONSUMER_KEY=[your twitter API consumer key]
